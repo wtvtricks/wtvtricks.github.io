@@ -1,156 +1,161 @@
-<!-- MattMan69's ConnectSetup v2.2, updated by SKCro -->
-<html><head>
-  <title>WebTV Viewer Connection Setup</title>
-  <display noscroll allowoffline notvaudio>
-</head><body bgcolor=#003366 background=bgpattern.gif text=#c9c9c9 link=#0080ff vlink=#0080ff hspace=0 vspace=0 yspeed=1 fontsize=medium transition=slidedown onload=updateService();>
-<script>
-  function updateService(){ /* Service list. If you need to add something, make sure to add it in the options list too. */
-    var ip=document.connect.machine;
-    var port=document.connect.port;
-    var runby=document.connect.runby;
-    var msg=document.message.msg;
-    switch(document.connect.preset[document.connect.preset.selectedIndex].value){
-      case 'jarhead':
-        ip.value='community.webtv.zone';
-        port.value='1615';
-        runby.value='JarHead';
-        msg.value='The WebTV Redialed minisrv, for those who want a more original WebTV experience. Simulates the WebTV Network as it was in 1999. Currently in public beta.';
-      break;
-      case 'hacktv':
-        ip.value='turdinc.kicks-ass.net';
-        port.value='1615';
-        runby.value='MattMan69';
-        msg.value='The public HackTV minisrv, all are welcome to connect and enjoy the wonders of WebTV. Custom experience, but simulates the WebTV betwork after its MSN TV rebrand.';
-      break;
-      case 'hacktvbackup':
-        ip.value='turdinc.kicks-ass.net';
-        port.value='1415';
-        runby.value='MattMan69';
-        msg.value='The HackTV minisrv backup server, only available when the main HackTV server is down.';
-      break;
-      case 'zefie':
-        ip.value='webtv.zefie.net';
-        port.value='1615';
-        runby.value='Zefie';
-        msg.value='Zefie\'s public minisrv, for those who want the vanilla minisrv experience. For more info, see https://github.com/zefie/minisrv.';
-      break;
-      case 'localhost':
-        ip.value='127.0.0.1';
-        port.value='1615';
-        runby.value='You!';
-        msg.value='Connects to a server running on your local machine. Doesn\'t do anything if a server isn\'t running. See https://github.com/zefie/minisrv for server software.';
-      break;
-      case 'other':
-        ip.value='';
-        port.value='1615';
-        runby.value='?';
-        msg.value='Your custom service. Type an IPv4 address or domain name into the address port. (Note that IPv6 addresses cannot be used.)';
-      break;
-      case 'example': /* An example of how to add a service to the list. Change the value of the case - you will use this in the options list later. */
-        ip.value='111.222.333.444'; /* IP address of your server. Can be any IPv4 address or domain name, but can't be an IPv6 address. */
-        port.value='1615'; /* Server port. Unless you've specified a different port on your minisrv, leave this set to the default value. */
-        runby.value='Someone'; /* Who the server is run by. Can be left blank. */
-        msg.value='Server description.'; /* Custom server description. Put whatever you want here. */
-      break; /* This marks the end of a case. */
-    }
-    /* This code is unrelated to connect setup and just displays the PAL mode warning. */
-    var pW=document.palWarning;
-    if(window.innerWidth>560){
-      return;
-    }else{
-      pW.t1.disabled=true;
-      pW.t1.visibility='hidden';
-      pW.t2.disabled=true;
-      pW.t2.visibility='hidden';
-      pW.t3.disabled=true;
-      pW.t3.visibility='hidden';
-      pW.palLink.disabled=true;
-      pW.palLink.visibility='hidden';
-      pW.t4.disabled=true;
-      pW.t4.visibility='hidden';
-    }
-  }
-</script>
-<table cellspacing=0 cellpadding=0>
+<html>
+<head>
+<title>the switchinator 9000</title>
+<DISPLAY noscroll notvaudio switchtowebmode>
+</head>
+<body bgcolor="#191919" text="#44cc55" link="#aaaaaa"
+hspace="0" vspace="0" fontsize="large" noscroll>
+
+<table cellspacing="0" cellpadding="0" cellborder="0">
   <tr>
-    <td background=cSetupShadowLogo.gif width=104 height=80 valign=top align=left><spacer type=block width=11 height=11><br>
-      <spacer type=block width=10 height=1>
-      <a href="client:showAlert?message=<style>b{color:#0080ff;}</style>Original Connect Setup page created by <blackface>MattMan69</blackface>.<br>Visuals, new HTML structure, and FAQ created by <blackface>SKCro</blackface>.<br>Visit the WebTV Discord at <b>https://discord.gg/qke279EUa8</b>.&buttonaction1=client:doNothing&buttonlabel1=Cool!"><img src=WebTVLogoJewel.gif width=87 height=67></a>
-    </td>
-    <td width=456 height=80 valign=top>
-      <img src=cSetup.gif width=456 height=50><br>
-      <img src=file://rom/tvimages/Shadow_Horizontal.gif width=456 height=6>
-    </td>
+    <td width="104" height="80" valign="top" align="left"><spacer type="block" WIDTH="11" HEIGHT="11"><br>
+<spacer type="block" WIDTH="10" HEIGHT="1">    <a href="wtv-home:/home"><img src="wtv-star:/ROMCache/WebTVLogoJewel.gif" width="87"
+    height="67"></a>       
+      </td>
+    <td width="456" height="80" valign="middle" align="center">
+ <br><h2>
+         &nbsp;<font size=+1>Server Switcher </font><br>
+		 &nbsp;<font size=-1><i>for when you just really hate the 90s also dont install a hacktv build on real landline</i></font>
+         </h2>
+</td>
   </tr>
+<tr><td colspan=4><hr>
+<tr><td absheight=6>
 </table>
-<table width=100% cellspacing=0 cellpadding=0 border=0>
-  <tr>
-    <td valign=bottom>
-      <font color=#f0f0f0 size=+2><shadow><b>&nbsp;Connection Setup</b></shadow></font>
-    </td>
-    <td align=right width=1>
-      <form onsubmit=location.href='FAQ.htm';><font color=#e7ce4a size=-1><shadow>
-        <input type=submit borderimage=file://ROM/tvimages/TVButtonBorder.bif value="WebTV FAQ" usestyle>
-      </shadow></font></form>
-    </td>
-    <td align=right width=1><a href=http://www.rayhill.com/archive/webtv/screenshots/><img width=5 height=5></a></td>
-  </tr>
-</table>
-<spacer height=2 type=vertical>
-<hr>
-<form name=connect action=client:ConfirmConnectSetup>
-  <spacer height=15 type=vertical>
-  <table width=100% cellspacing=1 cellpadding=0>
-    <tr>
-      <td colspan=3><spacer width=5 type=horizontal><shadow>Servers:</shadow></td>
-      <td>
-        <spacer width=24 type=horizontal>
-        <select width=90% name=preset onchange=updateService();> <!-- Options list. If you added a service to the service list, make sure to add it here too so it actually shows up. -->
-          <option value=jarhead>WebTV Redialed</option>
-          <option value=hacktv>HackTV</option>
-          <option value=hacktvbackup>HackTV (Backup Server)</option>
-          <option value=zefie>ZefieTV</option>
-          <option value=localhost>Localhost</option>
-          <!-- <option value=example>Server Name</option> --> <!-- Uncomment, then change the value to the "case" you specified earlier and add a proper server name. -->
-          <option value=other>Other</option>
-        </select>
-      </td>
-    </tr>
-  </table>
-  <spacer height=15 type=vertical>
-  <center>
-    <shadow>Address:</shadow><spacer width=5 height=1 type=block><input size=16 asciionly name=machine bgcolor=#001122 text=#c9c9c9 cursor=#004488 value=community.webtv.zone> <!-- Default server IP. -->
-    <spacer width=15 height=1 type=block>
-    <shadow>Port:</shadow><spacer width=5 height=1 type=block><input size=5 asciionly numbers name=port bgcolor=#001122 text=#c9c9c9 cursor=#004488 value=1615> <!-- Default server port. -->
-    <input type=hidden name=serviceType value=custom> <!-- Hidden inputs. Required for WebTV to understand the connection request, so leave these options alone. -->
-    <input type=hidden name=useEncryption value=true>
-  </center>
-  <spacer width=1 height=15 type=block>
-  <hr>
-  <spacer width=1 height=5 type=block>
-  <table cellpadding=5>
-    <tr><td><shadow>Description:</shadow></td></tr>
-    <tr>
-      <td width=380>
-        <form name=message><font color=#c9c9c9> <!-- Default description. -->
-          <shadow><textarea name=msg rows=4 size=50 border=0 nobackground nohighlight noselect usestyle>The WebTV Redialed minisrv, for those who want a more original WebTV experience. Simulates the WebTV Network as it was in 1999. Currently in public beta.</textarea></shadow>
-        </font></form>
-      </td>
-      <td valign=top>
-        <font color=#e7ce4a size=-1><shadow>
-          <b><input type=submit borderimage=file://ROM/tvimages/TVButtonBorder.bif value=Connect name=Connect width=150 usestyle selected></b> <!-- Connect button. -->
-          <br><br><font color=#c9c9c9>Server run by:</font>
-          <b><input name=runby border=0 nobackground nohighlight noselect usestyle value=JarHead></b>
-        </shadow></font>
-      </td>
-    </tr>
-  </table>
-</form>
-<form name=palWarning onsubmit=location.href='FAQ.htm#pal';> <!-- Only shows up when you're using PAL mode, which isn't recommended. -->
-  <font color=#f0f0f0><shadow><center>
-    <input name=t1 width=468 border=0 nobackground nohighlight noselect usestyle value="If you're seeing this text, you're probably using PAL mode.">
-    <b><input name=t2 width=629 border=0 nobackground nohighlight noselect usestyle value="Using PAL mode is not recommended because it will break page layouts."></b>
-    <input name=t3 width=98 border=0 nobackground nohighlight noselect usestyle value="Please see"> <input type=submit value="this page" name=palLink> <input name=t4 width=133 border=0 nobackground nohighlight noselect usestyle value="for more details.">
-  </center></shadow></font>
-</form>
-</body></html>
+
+
+
+	  <script>
+
+  
+	  function doConnect() {
+		if (document.connect.machine.value == "192.161.48.92" && document.connect.port.value == "1615") {
+				alert("You are already here!");
+		} else {
+			document.connect.submit();
+		}
+	  }
+
+	  function setOther() {
+			count = document.connect.preset.length;
+			document.connect.preset.selectedIndex = count - 1;
+			setTimeout(updateService,10);
+	  }
+	  function updateService() {
+		srv = document.connect.preset[document.connect.preset.selectedIndex].value;
+		switch (srv) {
+				case "mattman69":
+					document.connect.machine.value="71.244.121.234"
+                    document.connect.port.value="1615"
+                    document.message.msg.value="This is MattMan69's Public HackTV shittysrv, all are welcome to connect and enjoy the wonders of WebTV. Offers a custom experience."
+					break;
+				case "zefie":
+					document.connect.machine.value="24.105.201.236"
+					document.connect.port.value="1615"
+                    document.message.msg.value="This is zefie's public minisrv, for those who want the vanilla minisrv experience."
+					break;
+				case "local":
+					document.connect.machine.value="127.0.0.1"
+					document.connect.port.value="1615"
+					document.message.msg.value='Connect to your server via localhost. This option is for users running their own server, and connecting with the Viewer.'
+					break;
+				case "wni-prod":
+					document.connect.machine.value="98.110.227.123"
+					document.connect.port.value="1615"
+					document.message.msg.value='Default WebTV Production IP/Port. Can be used to check your routing setup.'
+					break;
+				case "wni-int":
+					document.connect.machine.value="10.0.128.1"
+					document.connect.port.value="1615"
+					document.message.msg.value='Default WebTV Internal IP/Port. Can be used to check your routing setup.'
+					break;
+				case "jarhead":
+					document.connect.machine.value="192.161.48.92"
+					document.connect.port.value="1615"
+					document.message.msg.value="Jarhead's public minisrv, offers the most production-like WebTV service, to simulate how it was like back then."
+				case "other":
+					document.message.msg.value="The WebTV Redialed minisrv, for those who want a more original WebTV experience. Simulates the WebTV Network as it was in 1999. Currently in public beta."
+
+		}
+	  }
+	  </script>
+      <form name="connect" action="wtv-tricks:/switcher">
+         <table width=100% cellspacing=1 cellpadding=0>
+		    <tr>
+				<td colspan=3>
+					&nbsp;Presets:
+				</td>
+				<td><spacer W=24 type=block>
+					<select width="440" name="preset" onchange="updateService()" selected>
+						<option value="mattman69" selected>MattMan69's HackTV minisrv</option>
+						<option value="zefie">zefie's minisrv</option>
+						<option value="jarhead">JarHead's WebTV Redialed Server</option>
+						<option value="local">Your local minisrv</option>
+						<option value="wni-prod">My server</option>
+						<option value="wni-int">WebTV Internal Default</option>
+						<option value="other">Other</option>
+					</select>
+<tr><td absheight=6>
+            </table>
+ <hr>
+          <table width=100% cellspacing=1 cellpadding=0>
+            <tr>
+               <td height=6>
+            <tr>
+               <td colspan=3>
+                  &nbsp;Service:
+            <tr>
+               <td width=15></td>
+               <td height=2>
+            <tr>
+               <td height=2>
+            <tr>
+               <td>
+               <td>
+                  <input name=serviceType type=radio bgcolor=#444444 value=custom checked>
+               <td>
+                  &nbsp;Custom:&nbsp;&nbsp;&nbsp;
+               <td>
+                  Address:
+                  <input size=16 ASCIIONLY name=machine bgcolor=#444444 text=#cc9933 cursor=#cc9933 value="71.244.121.234" onkeypress="setOther()">
+                  &nbsp;&nbsp;&nbsp;Port:
+                  <input size=5 ASCIIONLY NUMBERS name=port bgcolor=#444444 text=#cc9933 cursor=#cc9933 value="1615" onkeypress="setOther()">
+         </table>
+
+                <spacer type=block height="8">
+        <hr>
+		 <table cellspacing=1 cellpadding=0>
+            <tr>
+               <td height=8>
+            <tr>
+               <td colspan=3>
+                  &nbsp;Description:<br><br>
+            <tr>
+               <td width=20>
+               <td width=390 align=left valign=top>
+                  <form name=message>
+                   <textarea rows=4 size=46 text=#44cc55 id=msg name=msg border="0" bgcolor=#191919 value='This is the public HackTV shittysrv, all are welcome to connect and enjoy the wonders of WebTV. Custom experience!' nohighlight noselect>
+                   </textarea>
+                  </form>
+               <td>
+			   <td width=100% align=right valign=top>
+			   <form>
+                <spacer type=block height="60">
+					<font color="#E7CE4A" size=-2><shadow>&nbsp;
+                    <input type=hidden name=useEncryption value=true checked>
+					<input
+						type=button
+						value="Connect"
+						name="Connect"
+						onclick="doConnect()"
+						usestyle
+						width=170> &nbsp;
+					</shadow></font>
+				</form>
+
+
+         </table>
+      </form>
+
+</body>
+</html>
