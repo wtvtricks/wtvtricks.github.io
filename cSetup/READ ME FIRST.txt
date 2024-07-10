@@ -1,0 +1,10 @@
+If you don't want to type the Redialed IP into WebTV Viewer every time you want to connect, follow these instructions:
+
+1) Launch Viewer as you normally would
+2) On the menu bar, click Edit, then click Preferences
+3) Under "Web Mode Home Page", click the "Other" radio button.
+4) Set the URL to the following:
+file://disk/Browser/cSetup.htm
+5) Click OK and relaunch Viewer
+
+You should now see the updated Connect Setup page each time you launch Viewer. Just hit Connect and do `client:activ` as normal.

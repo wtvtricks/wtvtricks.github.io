@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<antinatconfig>
+	<!-- Any interface -->
+	<interface value='0.0.0.0'/>
+
+	<!-- Port to listen on -->
+	<port value='1080'/>
+
+	<!-- What security methods do we offer clients? -->
+	<authchoice>
+		<select mechanism='anonymous'/>
+		<select mechanism='chap'/>
+		<select mechanism='cleartext'/>
+	</authchoice>
+
+	<!-- Which connections should we accept or reject? -->
+	<filter>
+		<accept/>
+	</filter>
+</antinatconfig>
