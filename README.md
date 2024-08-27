@@ -3,6 +3,6 @@ i just made this for if your on a slow box it
           <svg style="color:#e34c26;" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-dot-fill mr-2">
     <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
 </svg>
-          <span class="color-fg-default text-bold mr-1">HTML</span>
           <span>100.0%</span>
+          <span class="color-fg-default text-bold mr-1">HTML</span>
         </a> so not so slow.
