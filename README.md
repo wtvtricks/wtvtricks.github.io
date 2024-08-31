@@ -5,4 +5,4 @@ i just made this for if your on a slow box it
 </svg>
           <span>100.0%</span>
           <span class="color-fg-default text-bold mr-1">HTML</span>
-        </a> so not so slow.
+        </a> so not so slow, bfe, etc.
