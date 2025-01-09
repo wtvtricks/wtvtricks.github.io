@@ -1,4 +1,4 @@
-<script>var minisrv_service_file = true;
+var minisrv_service_file = false;
 
 if (request_headers.query.machine && request_headers.query.port) {
 	headers = `200 OK
@@ -12,9 +12,7 @@ wtv-visit: client:activ
 `
 	data = `<html>
 <head>
-</script>
-	
-	
+
 <script>
 function activ() {
 	location.href = "client:activ";
@@ -28,7 +26,7 @@ function load() {
 </body>
 </html>
 
-<script>
+
    if (document.connect.machine.value == "${minisrv_config.services['wtv-1800'].host}" && document.connect.port.value == "${minisrv_config.services['wtv-1800'].port}") {
 				alert("You are already here!");
 		} else {
@@ -39,4 +37,4 @@ function load() {
 	  
 	  
 	  					document.connect.machine.value="71.244.121.234"
-                    document.connect.port.value="1615" </script>
+                    document.connect.port.value="1615"
