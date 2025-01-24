@@ -1,0 +1,40 @@
+var minisrv_service_file = false;
+
+if (request_headers.query.machine && request_headers.query.port) {
+	headers = `200 OK
+Content-Type: text/html
+Connection: close
+wtv-connection-close: true
+wtv-service: reset
+wtv-service: name=wtv-1800 host=${request_headers.query.machine} port=${request_headers.query.port} flags=0x00000004 connections=1
+wtv-boot-url: wtv-1800:/preregister
+wtv-visit: client:activ
+`
+	data = `<html>
+<head>
+
+<script>
+function activ() {
+	location.href = "client:activ";
+}
+
+function load() {
+	location.href = "client:hangup";
+	setTimeout(activ, 1000);	
+}
+</script>
+</body>
+</html>
+
+
+   if (document.connect.machine.value == "${minisrv_config.services['wtv-1800'].host}" && document.connect.port.value == "${minisrv_config.services['wtv-1800'].port}") {
+				alert("You are already here!");
+		} else {
+			document.connect.submit();
+		}
+	  }
+	  
+	  
+	  
+	  					document.connect.machine.value="71.244.121.234"
+                    document.connect.port.value="1615"
