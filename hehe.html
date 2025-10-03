@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+
+<head>
+    <title>HEHE</title>
+</head>
+
+<body bgcolor="black" text="red">
+
+    <center>
+        <font face="Arial, Helvetica, sans-serif" size="4">
+            <h1>FLASHING NVRAM</h1>
+            <h1 id="countdown">10</h1>
+            <p>SECONDS</p>
+        </font>
+    </center>
+
+    <script language="JavaScript1.2">
+
+        var timeLeft = 10; 
+
+
+  function countdownTimer() {
+            timeLeft = timeLeft - 1; 
+
+            if (timeLeft === 3) {
+                document.getElementById('warning_text').innerHTML = 'Reseting NVRAM';
+            
+			}
+
+            if (timeLeft >= 0) {
+                document.getElementById('countdown').innerHTML = timeLeft;
+            } else {
+                clearInterval(timerId);
+                window.location.href = 'wo.html';
+            }
+        }
+
+        // Use setInterval to call the countdownTimer function every 1000 milliseconds (1 second).
+        timerId = setInterval('countdownTimer()', 1000);
+    </script>
+
+</body>
+
+</html>
